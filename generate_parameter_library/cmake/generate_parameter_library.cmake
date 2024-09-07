@@ -74,7 +74,7 @@ function(generate_parameter_library LIB_NAME YAML_FILE)
   )
 
   # Create the library target
-  add_library(${LIB_NAME} INTERFACE ${PARAM_HEADER_FILE} ${VALIDATE_HEADER})
+  add_library(${LIB_NAME} ${PARAM_HEADER_FILE} ${VALIDATE_HEADER})
   target_include_directories(${LIB_NAME} INTERFACE
     $<BUILD_INTERFACE:${LIB_INCLUDE_DIR}>
     $<INSTALL_INTERFACE:include/${LIB_NAME}>
